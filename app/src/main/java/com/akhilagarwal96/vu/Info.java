@@ -5,4 +5,6 @@ package com.akhilagarwal96.vu;
  */
 
 public class Info {
+    int icon_id;
+    String title;
 }
