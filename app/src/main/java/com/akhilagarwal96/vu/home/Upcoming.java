@@ -1,4 +1,4 @@
-package com.akhilagarwal96.vu.Home;
+package com.akhilagarwal96.vu.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

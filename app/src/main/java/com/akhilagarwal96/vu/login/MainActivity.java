@@ -1,4 +1,4 @@
-package com.akhilagarwal96.vu;
+package com.akhilagarwal96.vu.login;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.akhilagarwal96.vu.home.Home;
+import com.akhilagarwal96.vu.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
