@@ -1,4 +1,4 @@
-package com.akhilagarwal96.vu;
+package com.akhilagarwal96.vu.Home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,17 +8,20 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.akhilagarwal96.vu.R;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 public class Upcoming extends Fragment {
 
+    @InjectView(R.id.attend_button)
     Button attend;
 
     @InjectView(R.id.miss_button)
     Button miss;
 
-    // @InjectView(R.id.attend_count)
+    @InjectView(R.id.attend_count)
     TextView attend_count;
 
     @InjectView(R.id.miss_count)

@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -28,8 +26,6 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    FrameLayout frameLayout;
     Button button;
     String response;
     EditText editText1, editText2;
@@ -73,36 +69,44 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),
                                 "Successful Login", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback0", response);
-                        Intent home_intent = new Intent(getApplicationContext(), CgpaCal.class);
+                        progressBar.setVisibility(View.INVISIBLE);
+                        Intent home_intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(home_intent);
                     } else if (code == 500) {
                         Toast.makeText(getApplicationContext(),
                                 "Incorrect credentials !", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback1", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     } else if (code == 600) {
                         Toast.makeText(getApplicationContext(),
                                 "The current session has timed out !", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback2", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     } else if (code == 700) {
                         Toast.makeText(getApplicationContext(),
                                 "The requested data could not be found !", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback3", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     }else if (code == 800) {
                         Toast.makeText(getApplicationContext(),
                                 "VIT servers are currently down. Kindly retry sometime later !", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback4", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     }else if (code == 900) {
                         Toast.makeText(getApplicationContext(),
                                 "Our servers are down for maintenance. Kindly bear with us!", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback5", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     }else if (code == 1000) {
                         Toast.makeText(getApplicationContext(),
                                 "Number of tries exceeded. Kindly limit it below 10 !", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback6", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     }else {
                         Toast.makeText(getApplicationContext(),
                                 "Kindly retry", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback7", response);
+                        progressBar.setVisibility(View.INVISIBLE);
                     }
 
 
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), response,
                         Toast.LENGTH_LONG).show();
 
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
 
@@ -172,7 +176,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
 
-
             try {
                 regno = "\"" + regno + "\"";
                 password = "\"" + password + "\"";
@@ -197,6 +200,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 /*
+
+    Toolbar toolbar;
+    FrameLayout frameLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
