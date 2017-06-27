@@ -46,7 +46,8 @@ public class Upcoming extends Fragment {
             @Override
             public void onClick(View view) {
 
-                attend_count.setText("Checking");
+                String a = (String) attend_count.getText();;
+                attend_count.setText(a);
             }
         });
         return view;

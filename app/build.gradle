@@ -24,23 +24,33 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //compile 'com.github.Triggertrap:SeekArc:v1.1'
+    
+
+    //inject views
+    //silding tabs custom
+    //circular progress
+    //compile 'com.github.flepsik:progress-ring-view:1.1.2' //circular progress
+    //circular image
+    //swipe to dismiss dialog box
+
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
 
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    //compile 'com.github.Triggertrap:SeekArc:v1.1'
     compile 'com.android.support:design:25.3.1'
-    testCompile 'junit:junit:4.12'
 
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 
-    compile 'com.jakewharton:butterknife:6.1.0' //inject views
-    compile 'com.yun.ospl:jtabstrip:1.5.5' //silding tabs custom
-    compile 'com.github.Triggertrap:SeekArc:v1.1' //circular progress
-    //compile 'com.github.flepsik:progress-ring-view:1.1.2' //circular progress
-    compile 'de.hdodenhof:circleimageview:2.1.0' //circular image
-    compile 'com.github.andreilisun:swipedismissdialog:0.1' //swipe to dismiss dialog box
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.yun.ospl:jtabstrip:1.5.5'
+    compile 'com.github.Triggertrap:SeekArc:v1.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.andreilisun:swipedismissdialog:0.1'
+
+    testCompile 'junit:junit:4.12'
 }

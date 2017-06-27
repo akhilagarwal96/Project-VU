@@ -13,8 +13,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.akhilagarwal96.vu.home.Home;
 import com.akhilagarwal96.vu.R;
+import com.akhilagarwal96.vu.messages.Messages;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),
                                 "Successful Login", Toast.LENGTH_LONG).show();
                         Log.d("QuestionsCallback0", response);
-                        progressBar.setVisibility(View.INVISIBLE);
-                        Intent home_intent = new Intent(getApplicationContext(), Home.class);
+                        progressBar.setVisibility(View.GONE);
+                        Intent home_intent = new Intent(getApplicationContext(), Messages.class);
                         startActivity(home_intent);
                     } else if (code == 500) {
                         Toast.makeText(getApplicationContext(),
