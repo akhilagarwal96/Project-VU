@@ -23,12 +23,4 @@
 
     </LinearLayout>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_draw"
-        app:layout="@layout/fragment_nav__draw"
-        android:layout_gravity="start"
-        tools:layout="@layout/fragment_nav__draw"></fragment>
-
 </android.support.v4.widget.DrawerLayout>
